@@ -45,7 +45,7 @@ model, model_features = train_model()
 
 # --- Streamlit UI ---
 
-st.title("🩺 Insurance Premium Estimator")
+st.title("🩺 Insurance Premium Estimator 🏥")
 st.sidebar.header("Enter Your Details")
 
 # --- Inputs ---
