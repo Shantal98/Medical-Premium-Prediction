@@ -77,13 +77,11 @@ else:
     color = "red"
 
 # --- Display BMI and category with color ---
+# --- Display BMI below Height and Weight in the sidebar ---
 st.sidebar.markdown(
     f"**Your BMI is:** <span style='color:{color}'>{bmi:.2f} ({category})</span>",
     unsafe_allow_html=True
 )
-
-# --- Display BMI below Height and Weight in the sidebar ---
-
 
 diabetes = st.sidebar.radio("Do you have diabetes?", ("Yes", "No"))
 blood_pressure = st.sidebar.radio("Do you have blood pressure problems?", ("Yes", "No"))
