@@ -57,7 +57,9 @@ height = st.sidebar.number_input("Height (cm)", 100, 250, 170)
 bmi = weight / ((height / 100) ** 2)
 
 # --- Display BMI below Height and Weight in the sidebar ---
-st.sidebar.markdown(f"**Your BMI is:** {bmi:.2f}")
+
+bmi_value = input_data['BMI'][0]
+st.sidebar.markdown(f"**Your BMI is:** <span style='color:blue'>{bmi_value:.2f}</span>", unsafe_allow_html=True)
 
 diabetes = st.sidebar.radio("Do you have diabetes?", ("Yes", "No"))
 blood_pressure = st.sidebar.radio("Do you have blood pressure problems?", ("Yes", "No"))
