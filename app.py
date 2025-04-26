@@ -74,4 +74,4 @@ input_data = input_data.reindex(columns=model_features, fill_value=0)
 # --- Prediction ---
 if st.button("Predict Premium"):
     prediction = model.predict(input_data)
-    st.success(f"💸 Predicted Insurance Premium: ${prediction[0]:,.2f}")
+    st.success(f"🎯 Predicted Insurance Premium: ${prediction[0]:,.2f}")
