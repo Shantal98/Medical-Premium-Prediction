@@ -1,5 +1,5 @@
 # Medical-Premium-Prediction-App
-Welcome to the Medical Premium Predictor! 
+Welcome to the Medical Premium Estimator! 
 This application predicts the medical premium of an individual based on key health indicators like age, height, weight, diabetes, history of cancer, chronic diseases, blood pressure history, known allergies, number of major surgeries, and organ transplants.
 
 ### **Key Features:**
