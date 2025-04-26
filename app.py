@@ -23,13 +23,6 @@ def load_data():
 
 df = load_data()
 
-# --- Preprocessing ---
-X = df.drop(columns=['PremiumPrice'])
-y = df['PremiumPrice']
-
-# Use BMI instead of Height and Weight
-X['BMI'] = df['BMI']
-X = X.drop(columns=['Height', 'Weight'])
 
 # Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
