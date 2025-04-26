@@ -1,22 +1,20 @@
 # Medical-Premium-Prediction-App
-Welcome to the Medical Premium Predictor! This app allows you to predict your medical insurance premium based on key health indicators. By entering the following details, we calculate the Body Mass Index (BMI) and predict your premium.
+Welcome to the Medical Premium Predictor! This app allows you to predict your medical insurance premium based on key health indicators. 
+This application predicts the medical premium of an individual based on key features like age, height, weight, diabetes, history of cancer, chronic diseases, blood pressure history, known allergies, number of major surgeries, and organ transplants.
 
-Key Features:
-Age: Your age plays a key role in determining your health insurance premium.
+### **Key Features:**
+- **Age**: The user's age plays a significant role in determining the insurance premium.
+- **Height & Weight**: The app calculates the Body Mass Index (BMI) using these values.
+- **Health Conditions**: Includes diabetes, history of cancer, chronic diseases, and blood pressure problems.
+- **Other Factors**: Includes known allergies, number of major surgeries, and organ transplants.
 
-Height & Weight: The app automatically calculates your BMI using these values to assess your health status.
+### **How It Works:**
+1. **Input your details** such as age, weight, height, and medical history in the app.
+2. **BMI** is automatically calculated using your height and weight.
+3. **Get the predicted medical premium** based on your health profile.
 
-Health Conditions: Including diabetes, history of cancer, chronic diseases, and blood pressure problems.
+### **Technologies Used:**
+- Python
+- Streamlit
+- Pandas
 
-Other Factors: Known allergies, number of surgeries, and organ transplants.
-
-Based on your input, the app provides a predicted medical premium.
-
-How It Works:
-Input your details in the sidebar.
-
-BMI is automatically calculated using your height and weight.
-
-Once you've filled in the details, hit the "Predict Premium" button.
-
-Get your predicted medical premium based on your health profile.
