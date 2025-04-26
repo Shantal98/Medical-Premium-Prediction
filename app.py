@@ -53,6 +53,12 @@ age = st.sidebar.slider("Age", 18, 100, 30)
 weight = st.sidebar.number_input("Weight (kg)", 30, 200, 70)
 height = st.sidebar.number_input("Height (cm)", 100, 250, 170)
 diabetes = st.sidebar.radio("Do you have diabetes?", ("Yes", "No"))
+# --- BMI Calculation ---
+bmi = weight / ((height / 100) ** 2)
+
+# --- Display BMI below Height and Weight in the sidebar ---
+st.sidebar.markdown(f"**Your BMI is:** {bmi:.2f}")
+
 blood_pressure = st.sidebar.radio("Do you have blood pressure problems?", ("Yes", "No"))
 transplant = st.sidebar.radio("Have you had any transplants?", ("Yes", "No"))
 chronic = st.sidebar.radio("Do you have any chronic diseases?", ("Yes", "No"))
@@ -65,6 +71,7 @@ input_data = pd.DataFrame({
     'Age': [age],
     'Weight': [weight],
     'Height': [height],
+    'BMI': [bmi],
     'Diabetes': [1 if diabetes == "Yes" else 0],
     'BloodPressureProblems': [1 if blood_pressure == "Yes" else 0],
     'AnyTransplants': [1 if transplant == "Yes" else 0],
@@ -75,10 +82,7 @@ input_data = pd.DataFrame({
     # Add other binary inputs if necessary
 })
 
-input_data['BMI'] = input_data['Weight'] / ((input_data['Height'] / 100) ** 2)
-input_data = input_data.drop(columns=['Weight', 'Height'])
-# Display calculated BMI
-st.sidebar.markdown(f"**Your BMI is:** `{input_data['BMI'][0]:.2f}`")
+
 
 # Align input features
 input_data = input_data.reindex(columns=model_features, fill_value=0)
