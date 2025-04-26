@@ -7,7 +7,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
-st.set_page_config(page_title="Insurance Premium Estimator", layout="centered")
+st.set_page_config(page_title="Medical Premium Estimator", layout="centered")
 
 # --- Load Dataset ---
 @st.cache_data
@@ -45,7 +45,7 @@ model, model_features = train_model()
 
 # --- Streamlit UI ---
 
-st.title("🩺 Insurance Premium Estimator 🏥")
+st.title("🩺 Medical Premium Estimator 🏥")
 st.sidebar.header("Enter Your Details")
 
 # --- Inputs ---
