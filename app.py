@@ -77,6 +77,8 @@ input_data = pd.DataFrame({
 
 input_data['BMI'] = input_data['Weight'] / ((input_data['Height'] / 100) ** 2)
 input_data = input_data.drop(columns=['Weight', 'Height'])
+# Display calculated BMI
+st.sidebar.markdown(f"**Your BMI is:** `{input_data['BMI'][0]:.2f}`")
 
 # Align input features
 input_data = input_data.reindex(columns=model_features, fill_value=0)
