@@ -53,12 +53,7 @@ age = st.sidebar.slider("Age", 18, 100, 30)
 weight = st.sidebar.number_input("Weight (kg)", 30, 200, 70)
 height = st.sidebar.number_input("Height (cm)", 100, 250, 170)
 diabetes = st.sidebar.radio("Do you have diabetes?", ("Yes", "No"))
-blood_pressure = st.sidebar.radio("Do you have blood pressure problems?", ("Yes", "No"))
-transplant = st.sidebar.radio("Have you had any transplants?", ("Yes", "No"))
-chronic = st.sidebar.radio("Do you have any chronic diseases?", ("Yes", "No"))
-allergies = st.sidebar.radio("Do you have any known allergies?", ("Yes", "No"))
-cancer_family = st.sidebar.radio("Family history of cancer?", ("Yes", "No"))
-surgeries = st.sidebar.slider("Number of major surgeries", 0, 10, 0)
+
 # --- Prepare input for prediction ---
 input_data = pd.DataFrame({
     'Age': [age],
