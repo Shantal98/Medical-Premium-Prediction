@@ -17,4 +17,5 @@ This application predicts the medical premium of an individual based on key heal
 - Python
 - Streamlit
 - Pandas
-
+- Numpy
+- Scikit Learn
