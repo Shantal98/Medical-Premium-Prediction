@@ -56,8 +56,34 @@ height = st.sidebar.number_input("Height (cm)", 100, 250, 170)
 # --- BMI Calculation ---
 bmi = weight / ((height / 100) ** 2)
 
+# --- Determine category and color based on BMI ---
+if bmi < 18.5:
+    category = "Underweight"
+    color = "blue"
+elif 18.5 <= bmi <= 24.9:
+    category = "Healthy Weight"
+    color = "green"
+elif 25 <= bmi <= 29.9:
+    category = "Overweight"
+    color = "purple"
+elif 30 <= bmi <= 34.9:
+    category = "Obesity Class I"
+    color = "orange"
+elif 35 <= bmi <= 39.9:
+    category = "Obesity Class II"
+    color = "darkorange"
+else:
+    category = "Obesity Class III"
+    color = "red"
+
+# --- Display BMI and category with color ---
+st.sidebar.markdown(
+    f"**Your BMI is:** <span style='color:{color}'>{bmi:.2f} ({category})</span>",
+    unsafe_allow_html=True
+)
+
 # --- Display BMI below Height and Weight in the sidebar ---
-st.sidebar.markdown(f"**Your BMI is:** <span style='color:green'>{bmi:.2f}</span>", unsafe_allow_html=True)
+
 
 diabetes = st.sidebar.radio("Do you have diabetes?", ("Yes", "No"))
 blood_pressure = st.sidebar.radio("Do you have blood pressure problems?", ("Yes", "No"))
