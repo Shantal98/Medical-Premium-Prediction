@@ -1,6 +1,6 @@
 # Medical-Premium-Prediction-App
-Welcome to the Medical Premium Predictor! This app allows you to predict your medical insurance premium based on key health indicators. 
-This application predicts the medical premium of an individual based on key features like age, height, weight, diabetes, history of cancer, chronic diseases, blood pressure history, known allergies, number of major surgeries, and organ transplants.
+Welcome to the Medical Premium Predictor! 
+This application predicts the medical premium of an individual based on key health indicators like age, height, weight, diabetes, history of cancer, chronic diseases, blood pressure history, known allergies, number of major surgeries, and organ transplants.
 
 ### **Key Features:**
 - **Age**: The user's age plays a significant role in determining the insurance premium.
